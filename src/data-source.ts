@@ -12,6 +12,8 @@ export const AppDataSource = new DataSource({
     synchronize: false,
     logging: true,
     entities: [User],
+    // migrations: [],
+    // 生产环境，我们不会用 synchronize 自动同步，就是用的 migration 的方式来建表。
     migrations: ['./src/migration/**.ts'],
     subscribers: [],
     poolSize: 10,
